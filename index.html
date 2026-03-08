@@ -18,13 +18,11 @@
         .logo { font-weight: 700; font-size: 1.5rem; color: var(--accent-color); letter-spacing: 1px; }
         nav a { text-decoration: none; color: var(--text-color); margin-left: 2rem; font-weight: 500; }
 
-        /* Hero Section */
         .hero { display: flex; padding: 5% 10%; align-items: center; gap: 8%; min-height: 70vh; }
         .hero-image { flex: 1; }
         .hero-image img { width: 100%; border-radius: 24px; box-shadow: 20px 20px 0px var(--accent-color); }
         .hero-text { flex: 1.2; }
         
-        /* 顶部状态小字 */
         .status-tag { 
             color: var(--secondary-color); 
             font-size: 0.8rem; 
@@ -39,7 +37,6 @@
         .highlight { color: var(--secondary-color); }
         .hero-text p { font-size: 1.25rem; margin: 1.5rem 0 2rem; color: #555; max-width: 500px; }
 
-        /* Projects Section */
         .section-title { text-align: center; padding: 4rem 0 2rem; font-size: 2.5rem; color: var(--accent-color); }
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 10% 5rem; }
         .card { background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; transition: 0.3s; }
@@ -47,7 +44,6 @@
         .card h3 { margin-top: 0; color: var(--accent-color); font-size: 1.5rem; }
         .tag { display: inline-block; padding: 0.2rem 0.8rem; background: #f0f4f1; border-radius: 50px; font-size: 0.85rem; margin-bottom: 1rem; color: var(--accent-color); font-weight: 600; }
 
-        /* Skills Section */
         .skills { background: white; padding: 5rem 10%; text-align: center; }
         .skills-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 4rem; margin-top: 2rem; }
         .skill-item h4 { margin-bottom: 0.5rem; color: var(--secondary-color); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
@@ -57,3 +53,62 @@
             .hero { flex-direction: column; text-align: center; }
             .hero-text h1 { font-size: 3rem; margin-top: 3rem; }
             .hero-text p { margin: 1.5rem auto; }
+            .hero-image { max-width: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">YANNI.</div>
+        <div>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="mailto:yannihhyn22@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="IMG_6269.JPG" alt="Yanni Han">
+        </div>
+        <div class="hero-text">
+            <span class="status-tag">• STATUS: EXPLORING • BUILDING • OPEN TO WORK</span>
+            <h1>Sunny. Driven.<br><span class="highlight">Impact-focused.</span></h1>
+            <p>
+                UBC Statistics junior turning raw data into strategic sunshine.
+                Passionate about predictive modeling and social media engagement.
+            </p>
+            <a href="mailto:yannihhyn22@gmail.com" style="text-decoration: none; padding: 1rem 2.5rem; background: var(--accent-color); color: white; border-radius: 50px; font-weight: 600; transition: 0.3s;">Let's Talk</a>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <span class="tag">R • SQL • Business</span>
+                <h3>Business Analytics & Pricing</h3>
+                <p>Engineered customer datasets to simulate pricing strategies, predicting a 20% increase in traffic and incremental monthly profit.</p>
+            </div>
+            <div class="card">
+                <span class="tag">Python • R • GLM</span>
+                <h3>Xiaohongshu Engagement</h3>
+                <p>Applied Poisson and Logistic Regression to analyze audience patterns and optimize content performance for social growth.</p>
+            </div>
+            <div class="card">
+                <span class="tag">Java • OOP • TDD</span>
+                <h3>Foodie Map System</h3>
+                <p>Developed a restaurant recommendation system using Java, featuring JSON data persistence and modular, reliable code.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">Technical Toolkit</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <h4>Languages</h4>
+                <p>R, Python, SQL, Java, Excel</p>
+            </div>
+            <div
