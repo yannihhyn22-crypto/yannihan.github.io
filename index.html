@@ -38,15 +38,17 @@
         .detail-btn { margin-top: auto; padding: 0.6rem 1.2rem; background: #f4f4f4; border-radius: 8px; color: #666; font-size: 0.9rem; font-weight: 600; border: none; cursor: pointer; transition: 0.3s; width: fit-content; }
         .detail-btn:hover { background: var(--accent-color); color: white; }
 
-        /* 弹窗样式 */
         #modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; padding: 40px 20px; }
         .modal-content { max-width: 1000px; margin: auto; display: flex; flex-direction: column; gap: 20px; }
         .modal-content img { width: 100%; border-radius: 12px; border: 2px solid #333; display: none; }
         .close-btn { position: fixed; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; font-weight: bold; z-index: 1001; }
 
         .skills { background: white; padding: 5rem 10%; text-align: center; }
-        .skills-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 4rem; margin-top: 2rem; }
-        .skill-item h4 { margin-bottom: 0.5rem; color: var(--secondary-color); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .skills-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 4rem; margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        .skill-item { flex: 1; min-width: 280px; }
+        .skill-item h4 { margin-bottom: 0.8rem; color: var(--secondary-color); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; }
+        .skill-item p { font-size: 1rem; color: #444; font-weight: 500; }
+        .cert-link { color: var(--accent-color); text-decoration: underline; cursor: pointer; font-weight: 600; }
 
         @media (max-width: 900px) { .hero { flex-direction: column; text-align: center; } .hero-text h1 { font-size: 3rem; } .hero-image { max-width: 400px; } }
     </style>
@@ -63,11 +65,7 @@
         <div class="hero-text">
             <span class="status-tag">• STATUS: EXPLORING • BUILDING • OPEN TO WORK</span>
             <h1>Sunny. Driven.<br><span class="highlight">Analytics-inspired.</span></h1>
-            <p>
-                <strong>Statistics student at UBC</strong> turning raw data into strategic sunshine. 
-                With a focus on <strong>actuarial science and risk analytics</strong>, I bridge the gap between 
-                statistical modeling and business impact. Passed <strong>SOA Exam P</strong>.
-            </p>
+            <p><strong>Statistics student at UBC</strong> turning raw data into strategic sunshine. With a focus on <strong>actuarial science and risk analytics</strong>. Passed <strong>SOA Exam P</strong>.</p>
             <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
                 <a href="https://www.linkedin.com/in/yanni-han-0bbb52353/" target="_blank" style="text-decoration: none; padding: 1rem 2rem; background: #0077B5; color: white; border-radius: 50px; font-weight: 600;">LinkedIn</a>
                 <a href="mailto:yannihhyn22@gmail.com" style="text-decoration: none; padding: 1rem 2rem; background: var(--accent-color); color: white; border-radius: 50px; font-weight: 600;">Email Me</a>
@@ -82,27 +80,34 @@
                 <div>
                     <span class="tag">R • SQL • Pricing Simulation</span>
                     <h3>Pricing Strategy & Business Growth</h3>
-                    <p>Engineered visit-level datasets using SQL to analyze behavioral trends. Identified a 54% drop in morning visits and developed R simulations estimating a 20% increase in customers and $221/month incremental profit.</p>
+                    <p>Engineered visit-level datasets using SQL to analyze behavioral trends. Identified a 54% drop in morning visits and estimated a 20% increase in customers through R simulations.</p>
                 </div>
                 <button class="detail-btn" onclick="openModal('pricing')">View Details</button>
             </div>
             
             <div class="card">
                 <div>
-                    <span class="tag">R • Logistic Regression • Clinical Data</span>
-                    <h3>Mental Health: Predicting Family History</h3>
-                    <p>Analyzed clinical datasets of 3,000+ patients to predict schizophrenia family history using PANSS scores. Implemented Logistic Regression models and validated hypotheses in R.</p>
+                    <span class="tag">R • Logistic Regression</span>
+                    <h3>Mental Health Risk Analytics</h3>
+                    <p>Analyzed clinical survey datasets of 3,000+ patients to predict family history. Implemented classification algorithms and visualized insights with ggplot2.</p>
                 </div>
                 <button class="detail-btn" onclick="openModal('mental')">View Details</button>
             </div>
 
             <div class="card">
                 <div>
+                    <span class="tag">Java • JUnit • JSON</span>
+                    <h3>Foodie Map: Discovery System</h3>
+                    <p>Designed a restaurant recommendation system using OOP. Developed features to filter, like, and rate restaurants. Applied TDD with JUnit and managed data persistence.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
                     <span class="tag">Python • R • GLM</span>
-                    <h3>Social Media Engagement</h3>
+                    <h3>Social Media Analytics</h3>
                     <p>Applied Poisson and Logistic Regression models to decode Xiaohongshu engagement patterns and optimize content performance strategies.</p>
                 </div>
-                <button class="detail-btn" style="opacity: 0.5; cursor: default;">Coming Soon</button>
             </div>
         </div>
     </section>
@@ -113,10 +118,10 @@
             <img class="pricing-img" src="ppt1.jpg">
             <img class="pricing-img" src="ppt2.jpg">
             <img class="pricing-img" src="ppt3.jpg">
-            
             <img class="mental-img" src="mental1.jpg">
             <img class="mental-img" src="mental2.jpg">
             <img class="mental-img" src="mental3.jpg">
+            <img class="cert-ai-img" src="cert_ai.jpg">
         </div>
     </div>
 
@@ -138,14 +143,23 @@
     <section id="skills" class="skills">
         <h2 class="section-title">Technical Toolkit</h2>
         <div class="skills-container">
-            <div class="skill-item"><h4>Languages</h4><p>R, Python, SQL, Java, Excel</p></div>
-            <div class="skill-item"><h4>Methods</h4><p>Regression, GLM, Predictive Modeling</p></div>
-            <div class="skill-item"><h4>Certifications</h4><p>SOA Exam P, Oracle Cloud AI</p></div>
+            <div class="skill-item">
+                <h4>Programming & Data</h4>
+                <p>R, Python, SQL, Excel, Java, Power BI, JSON</p>
+            </div>
+            <div class="skill-item">
+                <h4>Methods</h4>
+                <p>Regression, GLM, Classification, Hypothesis Testing, Predictive Modeling</p>
+            </div>
+            <div class="skill-item">
+                <h4>Certifications</h4>
+                <p>SOA Exam P (Passed), SOA Exam FM (Candidate), <span class="cert-link" onclick="openModal('cert-ai')">Oracle Cloud AI Foundations</span></p>
+            </div>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 4rem; color: #888; font-size: 0.9rem;">
-        © 2026 Yanni Han. Built with ☀️ in Vancouver.
+        © 2026 Yanni Han. Built with ☀️ in Vancouver. • Willing to relocate
     </footer>
 
 </body>
