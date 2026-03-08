@@ -16,7 +16,8 @@
         body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
         nav { padding: 2rem 10%; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 700; font-size: 1.5rem; color: var(--accent-color); letter-spacing: 1px; }
-        nav a { text-decoration: none; color: var(--text-color); margin-left: 2rem; font-weight: 500; }
+        nav a { text-decoration: none; color: var(--text-color); margin-left: 2rem; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--secondary-color); }
 
         .hero { display: flex; padding: 5% 10%; align-items: center; gap: 8%; min-height: 70vh; }
         .hero-image { flex: 1; }
@@ -57,7 +58,12 @@
 
     <nav>
         <div class="logo">YANNI.</div>
-        <div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="mailto:yannihhyn22@gmail.com">Contact</a></div>
+        <div>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Toolkit</a>
+            <a href="mailto:yannihhyn22@gmail.com">Contact</a>
+        </div>
     </nav>
 
     <section class="hero">
@@ -89,7 +95,7 @@
                 <div>
                     <span class="tag">R • Logistic Regression</span>
                     <h3>Mental Health Risk Analytics</h3>
-                    <p>Analyzed clinical survey datasets of 3,000+ patients to predict family history. Implemented classification algorithms and visualized insights with ggplot2.</p>
+                    <p>Analyzed clinical datasets of 3,000+ patients to predict schizophrenia family history using PANSS scores. Implemented Logistic Regression models and validated hypotheses in R.</p>
                 </div>
                 <button class="detail-btn" onclick="openModal('mental')">View Details</button>
             </div>
@@ -109,6 +115,38 @@
                     <p>Applied Poisson and Logistic Regression models to decode Xiaohongshu engagement patterns and optimize content performance strategies.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="experience" style="padding: 5rem 10%; background-color: #fff;">
+        <h2 class="section-title">Experience & Community</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto;">
+            
+            <div style="border-left: 3px solid var(--accent-color); padding-left: 2rem;">
+                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Education & Leadership</h4>
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="font-weight: 700; margin: 0;">Private Math & Statistics Tutor</p>
+                    <p style="font-size: 0.85rem; color: #888; margin-bottom: 0.5rem;">May 2025 – Aug 2025</p>
+                    <p style="font-size: 0.95rem; color: #555;">Provided 1-on-1 expert tutoring in <strong>IB/AP Mathematics</strong> and <strong>Statistics</strong>. Specialized in simplifying complex quantitative concepts, such as hypothesis testing and calculus derivations, to enhance students' analytical reasoning.</p>
+                </div>
+            </div>
+
+            <div style="border-left: 3px solid var(--secondary-color); padding-left: 2rem;">
+                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Volunteer Service</h4>
+                
+                <div style="margin-bottom: 1rem;">
+                    <p style="font-weight: 700; margin: 0;">UBC Spring Fair & Crypto Summit</p>
+                    <p style="font-size: 0.85rem; color: #888; margin-bottom: 0.3rem;">Mar 2025 – Apr 2025</p>
+                    <p style="font-size: 0.95rem; color: #555;">Managed registration for 300+ attendees and supported high-profile event logistics at international summits and campus fairs.</p>
+                </div>
+
+                <div>
+                    <p style="font-weight: 700; margin: 0;">Kindergarten Volunteer</p>
+                    <p style="font-size: 0.85rem; color: #888; margin-bottom: 0.3rem;">Nov 2024 – Dec 2024</p>
+                    <p style="font-size: 0.95rem; color: #555;">Coordinated daily student transitions and safety compliance for 20+ children at Mando Kids.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
