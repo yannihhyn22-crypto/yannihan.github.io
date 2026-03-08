@@ -29,7 +29,7 @@
         .hero-text { flex: 1.2; }
         .hero-text h1 { font-size: 4rem; margin: 0; line-height: 1.1; }
 
-        /* Education */
+        /* Education & Coursework */
         .education-section { 
             padding: 6rem 10%; 
             background: linear-gradient(rgba(0,33,69,0.85), rgba(0,33,69,0.85)), url('plantrip_header-2800x1000_2x.jpg');
@@ -37,43 +37,34 @@
         }
         .edu-content { max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; }
         .edu-logo img { width: 120px; border-radius: 8px; background: white; padding: 5px; }
+        .course-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem; }
+        .course-tag { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; }
 
         /* Projects */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 10% 5rem; }
         .card { background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; height: 100%; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
-        
-        /* 圆润按钮设计 */
         .detail-btn { 
-            margin-top: auto; 
-            padding: 0.8rem 2rem; 
-            background: #f4f4f4; 
-            border: 1px solid #ddd;
-            border-radius: 50px; 
-            color: #444; 
-            font-size: 0.9rem; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: 0.3s;
-            width: 100%;
-            text-align: center;
+            margin-top: auto; padding: 0.8rem; background: #f4f4f4; border: 1px solid #ddd;
+            border-radius: 50px; color: #444; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: 0.3s; width: 100%; text-align: center;
         }
-        .detail-btn:hover { background: var(--accent-color); color: white; border-color: var(--accent-color); }
+        .detail-btn:hover { background: var(--accent-color); color: white; }
 
-        /* Toolkit - Standardized */
+        /* Toolkit */
         .skills-container { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; padding: 5rem 10%; background: #fff; text-align: center; }
+        .skill-item { flex: 1; min-width: 280px; }
         .skill-item h4 { color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem; }
 
-        /* Experience */
+        /* Experience (Fixing Tutor Content) */
         .exp-section { padding: 5rem 10%; background-color: var(--bg-color); }
         .exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto; }
-        .exp-card { border-left: 3px solid var(--accent-color); padding-left: 2rem; margin-bottom: 2rem; }
+        .exp-card { border-left: 3px solid var(--accent-color); padding-left: 2rem; }
+        .exp-card ul { padding-left: 1rem; margin-top: 0.5rem; font-size: 0.95rem; color: #555; }
 
         /* Beyond Data */
         .interests { padding: 6rem 10%; text-align: center; background-color: #fff; }
         .interests-container { display: flex; align-items: center; justify-content: center; gap: 5%; max-width: 1200px; margin: auto; flex-wrap: wrap; }
-        .mosaic-wrapper { flex: 1; min-width: 320px; max-width: 500px; }
-        .mosaic-img { width: 100%; border-radius: 20px; box-shadow: 15px 15px 0px var(--secondary-color); }
+        .mosaic-img { width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 15px 15px 0px var(--secondary-color); }
 
         /* Modal */
         #modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; padding: 40px 20px; }
@@ -81,7 +72,7 @@
         .modal-content img { width: 100%; border-radius: 12px; display: none; }
         .close-btn { position: fixed; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
 
-        @media (max-width: 900px) { .hero, .edu-content, .interests-container { flex-direction: column; text-align: center; } .edu-text, .exp-card { text-align: center; border: none; padding-left: 0; } }
+        @media (max-width: 900px) { .hero, .edu-content, .interests-container { flex-direction: column; text-align: center; } .exp-card { border: none; padding-left: 0; text-align: center; } }
     </style>
 </head>
 <body>
@@ -96,7 +87,7 @@
         <div class="hero-text">
             <span style="color: var(--secondary-color); font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">• Open to Work</span>
             <h1>Sunny. Driven.<br><span class="highlight">Analytics-inspired.</span></h1>
-            <p><strong>Statistics student at UBC</strong> turning raw data into strategic sunshine. Focused on <strong>actuarial science and risk analytics</strong>.</p>
+            <p><strong>Statistics student at UBC</strong> turning raw data into strategic sunshine. Focused on <strong>actuarial science and risk analytics</strong>. Passed <strong>SOA Exam P</strong>.</p>
             <div style="display: flex; gap: 1.2rem;">
                 <a href="https://www.linkedin.com/in/yanni-han-0bbb52353/" target="_blank" style="text-decoration: none; padding: 1rem 2rem; background: #0077B5; color: white; border-radius: 50px; font-weight: 600;">LinkedIn</a>
                 <a href="mailto:yannihhyn22@gmail.com" style="text-decoration: none; padding: 1rem 2rem; background: var(--accent-color); color: white; border-radius: 50px; font-weight: 600;">Email</a>
@@ -110,7 +101,15 @@
             <div class="edu-text">
                 <h2>University of British Columbia</h2>
                 <h3>Bachelor of Science in Statistics</h3>
-                <p style="opacity: 0.9;">📍 Vancouver, BC | Actuarial Science Focus</p>
+                <p style="opacity: 0.9; margin-top: -1rem;">📍 Vancouver, BC | Actuarial Science Focus</p>
+                <div class="course-grid">
+                    <div class="course-tag">STAT 306: Regression</div>
+                    <div class="course-tag">STAT 300: Intermediate Stats</div>
+                    <div class="course-tag">STAT 344: Sample Surveys</div>
+                    <div class="course-tag">STAT 305: Inference</div>
+                    <div class="course-tag">CPSC 210: Software Construction</div>
+                    <div class="course-tag">ECON 301: Microeconomics</div>
+                </div>
             </div>
         </div>
     </section>
@@ -126,7 +125,7 @@
                 <div><span style="color: var(--accent-color); font-weight:600;">R • ML</span><h3>Mental Health Analytics</h3><p>Predicting family history using PANSS scores.</p></div>
                 <button class="detail-btn" onclick="openModal('mental')">View Details</button>
             </div>
-            <div class="card"><div><span style="color: var(--accent-color); font-weight:600;">Java • OOP</span><h3>Foodie Map System</h3><p>Restaurant recommendation system with JSON persistence.</p></div></div>
+            <div class="card"><div><span style="color: var(--accent-color); font-weight:600;">Java • OOP</span><h3>Foodie Map System</h3><p>Restaurant discovery system with JSON persistence.</p></div></div>
             <div class="card"><div><span style="color: var(--accent-color); font-weight:600;">Python • GLM</span><h3>Social Media Analytics</h3><p>Decoding engagement patterns using Poisson models.</p></div></div>
         </div>
     </section>
@@ -134,7 +133,7 @@
     <section id="skills" class="skills-container">
         <div class="skill-item">
             <h4>Programming & Data</h4>
-            <p>R, Python, SQL, Excel, Java, Power BI</p>
+            <p>R, Python, SQL, Excel, Java, Power BI, JSON</p>
         </div>
         <div class="skill-item">
             <h4>Methods</h4>
@@ -142,7 +141,7 @@
         </div>
         <div class="skill-item">
             <h4>Certifications</h4>
-            <p>SOA Exam P (Passed), SOA Exam FM (In Progress, Apr 2026), <span onclick="openModal('cert-ai')" style="text-decoration:underline; cursor:pointer;">Oracle Cloud AI</span> (Passed, Jun 2025)</p>
+            <p>SOA Exam P (Passed), SOA Exam FM (In Progress, Apr 2026), <span onclick="openModal('cert-ai')" style="text-decoration:underline; cursor:pointer;">Oracle Cloud AI</span> (Passed)</p>
         </div>
     </section>
 
@@ -150,22 +149,26 @@
         <h2 class="section-title">Experience & Community</h2>
         <div class="exp-grid">
             <div class="exp-card">
-                <h4 style="color: var(--accent-color);">Leadership</h4>
+                <h4 style="color: var(--accent-color);">Education</h4>
                 <p style="font-weight: 700;">Private Math & Statistics Tutor</p>
                 <p style="font-size: 0.85rem; color: #888;">May 2025 – Aug 2025</p>
-                <p style="font-size: 0.95rem;">Specialized in **IB/AP Math & Statistics**.</p>
+                <ul>
+                    <li>Provided one-on-one expert tutoring in **IB/AP Math & Statistics** to high school and undergraduate students.</li>
+                    <li>Simplified complex quantitative concepts and identified individual learning gaps to adapt teaching strategies.</li>
+                    <li>Strengthened students' quantitative reasoning and problem-solving skills through personalized instruction.</li>
+                </ul>
             </div>
             <div class="exp-card" style="border-color: var(--secondary-color);">
                 <h4 style="color: var(--secondary-color);">Volunteer</h4>
                 <div style="margin-bottom: 1.5rem;">
                     <p style="font-weight: 700; margin: 0;">UBC Spring Fair & Crypto Summit</p>
                     <p style="font-size: 0.85rem; color: #888;">Mar 2025 – Apr 2025</p>
-                    <p style="font-size: 0.95rem;">Managed logistics for 300+ attendees.</p>
+                    <p style="font-size: 0.95rem;">Managed logistics and registration for 300+ attendees.</p>
                 </div>
                 <div>
                     <p style="font-weight: 700; margin: 0;">Kindergarten Volunteer</p>
                     <p style="font-size: 0.85rem; color: #888;">Nov 2024 – Dec 2024</p>
-                    <p style="font-size: 0.95rem;">Coordinated transitions for 20+ children at Mando Kids.</p>
+                    <p style="font-size: 0.95rem;">Coordinated daily student transitions at Mando Kids.</p>
                 </div>
             </div>
         </div>
@@ -174,14 +177,10 @@
     <section id="interests" class="interests">
         <h2 class="section-title">Beyond the Data</h2>
         <div class="interests-container">
-            <div class="mosaic-wrapper"><img src="IMG_2328.jpg" class="mosaic-img" alt="Life Mosaic"></div>
-            <div class="interests-text">
+            <img src="IMG_2328.jpg" class="mosaic-img" alt="Life Mosaic">
+            <div style="text-align: left; padding: 2rem;">
                 <h4>Life is an Adventure.</h4>
-                <ul style="list-style:none; padding:0;">
-                    <li>🏔️ <strong>Hiking & Snowboarding:</strong> Whistler views.</li>
-                    <li>🪂 <strong>Bravery:</strong> Skydiving & Diving.</li>
-                    <li>🎬 <strong>Storytelling:</strong> Creative video editing.</li>
-                </ul>
+                <p style="color:#555;">🏔️ Hiking Whistler | 🪂 Skydiving | 🎬 Creative Editing</p>
             </div>
         </div>
     </section>
