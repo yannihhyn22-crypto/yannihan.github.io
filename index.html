@@ -40,8 +40,8 @@
 
         /* 弹窗样式 */
         #modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; padding: 40px 20px; }
-        .modal-content { max-width: 1000px; margin: auto; display: flex; flex-direction: column; gap: 20px; position: relative; }
-        .modal-content img { width: 100%; border-radius: 12px; border: 2px solid #333; }
+        .modal-content { max-width: 1000px; margin: auto; display: flex; flex-direction: column; gap: 20px; }
+        .modal-content img { width: 100%; border-radius: 12px; border: 2px solid #333; display: none; }
         .close-btn { position: fixed; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; font-weight: bold; z-index: 1001; }
 
         .skills { background: white; padding: 5rem 10%; text-align: center; }
@@ -82,23 +82,27 @@
                 <div>
                     <span class="tag">R • SQL • Pricing Simulation</span>
                     <h3>Pricing Strategy & Business Growth</h3>
-                    <p>Engineered visit-level datasets using SQL. Identified a 54% drop in morning visits and developed R simulations estimating a 20% increase in customers and $221/month incremental profit.</p>
+                    <p>Engineered visit-level datasets using SQL to analyze behavioral trends. Identified a 54% drop in morning visits and developed R simulations estimating a 20% increase in customers and $221/month incremental profit.</p>
                 </div>
-                <button class="detail-btn" onclick="openModal()">View Case Study</button>
+                <button class="detail-btn" onclick="openModal('pricing')">View Details</button>
             </div>
+            
+            <div class="card">
+                <div>
+                    <span class="tag">R • Logistic Regression • Clinical Data</span>
+                    <h3>Mental Health: Predicting Family History</h3>
+                    <p>Analyzed clinical datasets of 3,000+ patients to predict schizophrenia family history using PANSS scores. Implemented Logistic Regression models and validated hypotheses in R.</p>
+                </div>
+                <button class="detail-btn" onclick="openModal('mental')">View Details</button>
+            </div>
+
             <div class="card">
                 <div>
                     <span class="tag">Python • R • GLM</span>
-                    <h3>Social Media Analytics</h3>
+                    <h3>Social Media Engagement</h3>
                     <p>Applied Poisson and Logistic Regression models to decode Xiaohongshu engagement patterns and optimize content performance strategies.</p>
                 </div>
-            </div>
-            <div class="card">
-                <div>
-                    <span class="tag">R • Logistic Regression</span>
-                    <h3>Mental Health Risk Analytics</h3>
-                    <p>Analyzed clinical survey datasets to study mental health risk factors, implementing classification algorithms and visualizing insights with ggplot2.</p>
-                </div>
+                <button class="detail-btn" style="opacity: 0.5; cursor: default;">Coming Soon</button>
             </div>
         </div>
     </section>
@@ -106,15 +110,29 @@
     <div id="modal">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <div class="modal-content">
-            <img src="ppt1.jpg" alt="Key Data Insights">
-            <img src="ppt2.jpg" alt="Data and Methodology">
-            <img src="ppt3.jpg" alt="Financial Impact">
+            <img class="pricing-img" src="ppt1.jpg">
+            <img class="pricing-img" src="ppt2.jpg">
+            <img class="pricing-img" src="ppt3.jpg">
+            
+            <img class="mental-img" src="mental1.jpg">
+            <img class="mental-img" src="mental2.jpg">
+            <img class="mental-img" src="mental3.jpg">
         </div>
     </div>
 
     <script>
-        function openModal() { document.getElementById("modal").style.display = "block"; document.body.style.overflow = "hidden"; }
-        function closeModal() { document.getElementById("modal").style.display = "none"; document.body.style.overflow = "auto"; }
+        function openModal(type) {
+            document.getElementById("modal").style.display = "block";
+            document.body.style.overflow = "hidden";
+            const allImgs = document.querySelectorAll('.modal-content img');
+            allImgs.forEach(img => img.style.display = 'none');
+            const selectedImgs = document.querySelectorAll('.' + type + '-img');
+            selectedImgs.forEach(img => img.style.display = 'block');
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
     </script>
 
     <section id="skills" class="skills">
