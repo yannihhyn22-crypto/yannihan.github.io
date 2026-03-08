@@ -40,17 +40,34 @@
 
         /* Projects */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 10% 5rem; }
-        .card { background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; height: 100%; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .card { background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; height: 100%; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+        
+        /* 圆润按钮设计 */
+        .detail-btn { 
+            margin-top: auto; 
+            padding: 0.8rem 2rem; 
+            background: #f4f4f4; 
+            border: 1px solid #ddd;
+            border-radius: 50px; 
+            color: #444; 
+            font-size: 0.9rem; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        .detail-btn:hover { background: var(--accent-color); color: white; border-color: var(--accent-color); }
 
-        /* Toolkit */
+        /* Toolkit - Standardized */
         .skills-container { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; padding: 5rem 10%; background: #fff; text-align: center; }
         .skill-item h4 { color: var(--secondary-color); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem; }
 
         /* Experience */
         .exp-section { padding: 5rem 10%; background-color: var(--bg-color); }
         .exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto; }
-        .exp-card { border-left: 3px solid var(--accent-color); padding-left: 2rem; }
+        .exp-card { border-left: 3px solid var(--accent-color); padding-left: 2rem; margin-bottom: 2rem; }
 
         /* Beyond Data */
         .interests { padding: 6rem 10%; text-align: center; background-color: #fff; }
@@ -103,7 +120,7 @@
         <div class="projects-grid">
             <div class="card">
                 <div><span style="color: var(--accent-color); font-weight:600;">R • SQL</span><h3>Pricing Strategy</h3><p>Estimated 20% growth through R simulations.</p></div>
-                <button class="detail-btn" onclick="openModal('pricing')">View Case Study</button>
+                <button class="detail-btn" onclick="openModal('pricing')">View Details</button>
             </div>
             <div class="card">
                 <div><span style="color: var(--accent-color); font-weight:600;">R • ML</span><h3>Mental Health Analytics</h3><p>Predicting family history using PANSS scores.</p></div>
@@ -115,24 +132,41 @@
     </section>
 
     <section id="skills" class="skills-container">
-        <div class="skill-item"><h4>Programming</h4><p>R, Python, SQL, Java, Power BI</p></div>
-        <div class="skill-item"><h4>Certifications</h4><p>SOA Exam P (Passed), <span onclick="openModal('cert-ai')" style="text-decoration:underline; cursor:pointer;">Oracle Cloud AI</span></p></div>
+        <div class="skill-item">
+            <h4>Programming & Data</h4>
+            <p>R, Python, SQL, Excel, Java, Power BI</p>
+        </div>
+        <div class="skill-item">
+            <h4>Methods</h4>
+            <p>Regression, GLM, Classification, Feature Engineering, Hypothesis Testing, Predictive Modeling, Data Visualization</p>
+        </div>
+        <div class="skill-item">
+            <h4>Certifications</h4>
+            <p>SOA Exam P (Passed), SOA Exam FM (In Progress, Apr 2026), <span onclick="openModal('cert-ai')" style="text-decoration:underline; cursor:pointer;">Oracle Cloud AI</span> (Passed, Jun 2025)</p>
+        </div>
     </section>
 
     <section id="experience" class="exp-section">
         <h2 class="section-title">Experience & Community</h2>
         <div class="exp-grid">
             <div class="exp-card">
-                <h4 style="color: var(--accent-color);">Education</h4>
+                <h4 style="color: var(--accent-color);">Leadership</h4>
                 <p style="font-weight: 700;">Private Math & Statistics Tutor</p>
                 <p style="font-size: 0.85rem; color: #888;">May 2025 – Aug 2025</p>
-                <p style="font-size: 0.95rem;">Specialized in **IB/AP Math & Statistics** tutoring.</p>
+                <p style="font-size: 0.95rem;">Specialized in **IB/AP Math & Statistics**.</p>
             </div>
             <div class="exp-card" style="border-color: var(--secondary-color);">
                 <h4 style="color: var(--secondary-color);">Volunteer</h4>
-                <p style="font-weight: 700;">UBC Spring Fair & Crypto Summit</p>
-                <p style="font-size: 0.85rem; color: #888;">Mar 2025 – Apr 2025</p>
-                <p style="font-size: 0.95rem;">Managed logistics for 300+ attendees.</p>
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="font-weight: 700; margin: 0;">UBC Spring Fair & Crypto Summit</p>
+                    <p style="font-size: 0.85rem; color: #888;">Mar 2025 – Apr 2025</p>
+                    <p style="font-size: 0.95rem;">Managed logistics for 300+ attendees.</p>
+                </div>
+                <div>
+                    <p style="font-weight: 700; margin: 0;">Kindergarten Volunteer</p>
+                    <p style="font-size: 0.85rem; color: #888;">Nov 2024 – Dec 2024</p>
+                    <p style="font-size: 0.95rem;">Coordinated transitions for 20+ children at Mando Kids.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -144,9 +178,9 @@
             <div class="interests-text">
                 <h4>Life is an Adventure.</h4>
                 <ul style="list-style:none; padding:0;">
-                    <li>🏔️ <strong>Hiking & Snowboarding</strong></li>
-                    <li>🪂 <strong>Bravery:</strong> Skydiving & Diving</li>
-                    <li>🎬 <strong>Storytelling:</strong> Video Editing</li>
+                    <li>🏔️ <strong>Hiking & Snowboarding:</strong> Whistler views.</li>
+                    <li>🪂 <strong>Bravery:</strong> Skydiving & Diving.</li>
+                    <li>🎬 <strong>Storytelling:</strong> Creative video editing.</li>
                 </ul>
             </div>
         </div>
