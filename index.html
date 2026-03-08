@@ -18,6 +18,7 @@
         .logo { font-weight: 700; font-size: 1.5rem; color: var(--accent-color); letter-spacing: 1px; }
         nav a { text-decoration: none; color: var(--text-color); margin-left: 2rem; font-weight: 500; }
 
+        /* Hero Section */
         .hero { display: flex; padding: 5% 10%; align-items: center; gap: 8%; min-height: 70vh; }
         .hero-image { flex: 1; }
         .hero-image img { width: 100%; border-radius: 24px; box-shadow: 20px 20px 0px var(--accent-color); }
@@ -37,6 +38,7 @@
         .highlight { color: var(--secondary-color); }
         .hero-text p { font-size: 1.25rem; margin: 1.5rem 0 2rem; color: #555; max-width: 500px; }
 
+        /* Projects Section */
         .section-title { text-align: center; padding: 4rem 0 2rem; font-size: 2.5rem; color: var(--accent-color); }
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 10% 5rem; }
         .card { background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; transition: 0.3s; }
@@ -44,6 +46,7 @@
         .card h3 { margin-top: 0; color: var(--accent-color); font-size: 1.5rem; }
         .tag { display: inline-block; padding: 0.2rem 0.8rem; background: #f0f4f1; border-radius: 50px; font-size: 0.85rem; margin-bottom: 1rem; color: var(--accent-color); font-weight: 600; }
 
+        /* Skills Section */
         .skills { background: white; padding: 5rem 10%; text-align: center; }
         .skills-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 4rem; margin-top: 2rem; }
         .skill-item h4 { margin-bottom: 0.5rem; color: var(--secondary-color); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
@@ -74,12 +77,25 @@
         </div>
         <div class="hero-text">
             <span class="status-tag">• STATUS: EXPLORING • BUILDING • OPEN TO WORK</span>
-            <h1>Sunny. Driven.<br><span class="highlight">Impact-focused.</span></h1>
+            <h1>Sunny. Driven.<br><span class="highlight">Analytics-inspired.</span></h1>
             <p>
-                UBC Statistics junior turning raw data into strategic sunshine.
-                Passionate about predictive modeling and social media engagement.
+                <strong>Statistics student at UBC</strong> turning raw data into strategic sunshine[cite: 2, 72]. 
+                With a focus on <strong>actuarial science and risk analytics</strong>, I bridge the gap between 
+                statistical modeling (R, Python, Excel) and business impact[cite: 4, 5, 11]. 
+                Passed <strong>SOA Exam P</strong>; seeking <strong>Data, Actuarial, or Risk Analytics</strong> 
+                Co-op/Internship opportunities to drive business and economic insights[cite: 9, 74, 13].
             </p>
-            <a href="mailto:yannihhyn22@gmail.com" style="text-decoration: none; padding: 1rem 2.5rem; background: var(--accent-color); color: white; border-radius: 50px; font-weight: 600; transition: 0.3s;">Let's Talk</a>
+
+            <div style="display: flex; gap: 1.2rem; margin-top: 2rem; flex-wrap: wrap;">
+                <a href="https://www.linkedin.com/in/yanni-han-0bbb52353/" target="_blank" 
+                   style="text-decoration: none; padding: 1rem 2rem; background: #0077B5; color: white; border-radius: 50px; font-weight: 600; transition: 0.3s; display: inline-block;">
+                   LinkedIn
+                </a>
+                <a href="mailto:yannihhyn22@gmail.com" 
+                   style="text-decoration: none; padding: 1rem 2rem; background: var(--accent-color); color: white; border-radius: 50px; font-weight: 600; transition: 0.3s; display: inline-block;">
+                   Email Me
+                </a>
+            </div>
         </div>
     </section>
 
@@ -89,17 +105,17 @@
             <div class="card">
                 <span class="tag">R • SQL • Business</span>
                 <h3>Business Analytics & Pricing</h3>
-                <p>Engineered customer datasets to simulate pricing strategies, predicting a 20% increase in traffic and incremental monthly profit.</p>
+                <p>Engineered datasets to simulate pricing strategies, predicting a 20% increase in traffic and incremental monthly profit[cite: 13, 20].</p>
             </div>
             <div class="card">
                 <span class="tag">Python • R • GLM</span>
                 <h3>Xiaohongshu Engagement</h3>
-                <p>Applied Poisson and Logistic Regression to analyze audience patterns and optimize content performance for social growth.</p>
+                <p>Applied Poisson and Logistic Regression to analyze audience patterns and optimize content performance for social growth[cite: 21, 26].</p>
             </div>
             <div class="card">
                 <span class="tag">Java • OOP • TDD</span>
                 <h3>Foodie Map System</h3>
-                <p>Developed a restaurant recommendation system using Java, featuring JSON data persistence and modular, reliable code.</p>
+                <p>Developed a restaurant recommendation system using Java, featuring JSON data persistence and modular, reliable code[cite: 42, 46].</p>
             </div>
         </div>
     </section>
@@ -109,6 +125,22 @@
         <div class="skills-container">
             <div class="skill-item">
                 <h4>Languages</h4>
-                <p>R, Python, SQL, Java, Excel</p>
+                <p>R, Python, SQL, Java, Excel [cite: 4, 6]</p>
             </div>
-            <div
+            <div class="skill-item">
+                <h4>Methods</h4>
+                <p>Regression, GLM, Predictive Modeling [cite: 5]</p>
+            </div>
+            <div class="skill-item">
+                <h4>Certifications</h4>
+                <p>SOA Exam P, Oracle Cloud AI [cite: 9, 11]</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 4rem; color: #888; font-size: 0.9rem;">
+        © 2026 Yanni Han. Built with ☀️ and Code in Vancouver.
+    </footer>
+
+</body>
+</html>
